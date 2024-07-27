@@ -1,0 +1,187 @@
+@font-face {
+  font-family: MyFont;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: MyFont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(234, 29%, 20%);
+}
+
+.card {
+  display: flex;
+  width: 800px;
+  background: hsl(0, 0%, 100%);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  width: 40%;
+}
+
+.left img {
+  width: 100%;
+}
+
+ul {
+  list-style-image: url(./assets/images/icon-success.svg);
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px 20px;
+  font-family: inherit;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(235, 18%, 26%);
+}
+
+button:hover {
+  
+  background-color: hsl(4, 100%, 67%);
+  transition: all 1s;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.card-2 {
+  background-color: hsl(0, 0%, 100%);
+  width: 400px;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+card-2 h1 {
+  font-size: 40px;
+  
+}
+
+.icon-card-2 {
+  width: 50px;
+}
+
+.card-2 button {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column-reverse;
+    width: 95%;
+    padding: 0;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card h1 {
+    font-size: 30px;
+  }
+  .right {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .left {
+    width: 100%;
+  }
+  
+  .left img {
+    content: url('./assets/images/illustration-sign-up-mobile.svg');
+  }
+  
+  form {
+    width: 90%;
+  }
+  
+  .card-2 {
+    min-height: 100vh;
+  }
+}
+
+/* Parent container for the input and error message */
+.input-container {
+  position: relative; /* Establishes a positioning context for the child elements */
+}
+
+/* Style for the input when invalid */
+input:invalid {
+  border-color: hsl(4, 100%, 67%);
+  width: 100%;
+}
+
+/* Style for the error message */
+.error-message {
+  display: none; /* Hide the error message by default */
+  color: hsl(4, 100%, 67%);
+  font-size: 15px;
+  position: absolute;
+  top: -28px; /* Adjust the position relative to the input field */
+  right: 0;
+  z-index: 10;
+}
+
+/* Show the error message when input is invalid */
+input:invalid + .error-message {
+  display: block;
+}
+
+.attribution {
+  display: inline;
+  position: absolute;
+  top: 0px;
+  font-size: 20px;
+  color: hsl(180, 100%, 50%);
+  background: hsl(234, 29%, 20%);
+
+  a {
+    color: hsl(33, 100%, 88%);
+  }
+}
